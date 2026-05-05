@@ -15,6 +15,7 @@ import {
 import { ProcessInfo, KillProcess, ExecBackground, ReadFile, RemoveFile } from '@/bridge'
 import {
   CoreConfigFilePath,
+  CoreLogFilePath,
   CorePidFilePath,
   CoreStopOutputKeyword,
   CoreWorkingDirectory,
@@ -264,6 +265,7 @@ export const useKernelApiStore = defineStore('kernelApi', () => {
         },
         {
           PidFile: CorePidFilePath,
+          LogFile: CoreLogFilePath,
           StopOutputKeyword: CoreStopOutputKeyword,
           Env: getKernelRuntimeEnv(isAlpha),
         },
